@@ -114,3 +114,21 @@ for product, clicks in product_clicks.items():  # TODO: replace product_clicks w
 ```
 
 What does the `.items()` method return when used on a dictionary?
+
+---
+## 2026-10-29 11:33, in .
+
+**Me:** How to count the lenght in letters in Python
+
+**Tutor:**
+
+Counting the length of a string in Python is done with the built-in function `len()`.
+
+```python
+# Counting the number of letters in a string
+text = "hello"
+length = len(text)  # TODO: Replace "hello" with your string variable
+print(length)
+```
+
+What does the `len()` function return when applied to a string?
