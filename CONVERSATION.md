@@ -66,3 +66,22 @@ What does the `input()` function return?
 **Tutor:**
 
 Refused, off topic.
+
+---
+## 2026-10-29 11:05, in .
+
+**Me:** how to sort a list in Python
+
+**Tutor:**
+
+Sorting a list in Python is done with the built-in `sort()` method or the `sorted()` function.
+
+Pattern using `sorted()` (returns a new list):
+```python
+# TODO: replace the toy list with your real list
+toy_list = [3, 1, 4, 1, 5]
+sorted_list = sorted(toy_list)  # TODO: decide ascending or descending
+print(sorted_list)
+```
+
+Which argument controls ascending vs descending order in `sorted()`?
