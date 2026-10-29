@@ -52,4 +52,6 @@ print("The person's age is:", person["age"])
 print("The person's city is:", person["city"])
 print("The person's country is:", person["country"])
 
-person.pop("age")
+peerson_age = person.pop("age")
+print("The person's age was:", peerson_age)
+print("The remaining fields are:", person)
