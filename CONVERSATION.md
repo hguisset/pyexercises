@@ -85,3 +85,32 @@ print(sorted_list)
 ```
 
 Which argument controls ascending vs descending order in `sorted()`?
+
+---
+## 2026-10-29 11:13, in .
+
+**Me:** How to work with a dictionnary in Python
+
+**Tutor:**
+
+Working with a dictionary in Python is about storing and retrieving data using key-value pairs.
+
+```python
+# Creating a dictionary
+product_clicks = {
+    "shoes": 120,   # TODO: replace with your real key-value pair
+    "hats": 45      # TODO: replace with your real key-value pair
+}
+
+# Accessing a value by its key
+shoes_clicks = product_clicks["shoes"]  # TODO: replace "shoes" with your real key
+
+# Adding or updating a key-value pair
+product_clicks["bags"] = 89  # TODO: replace "bags" with your real key
+
+# Iterating over keys and values
+for product, clicks in product_clicks.items():  # TODO: replace product_clicks with your real dict
+    print(f"{product} had {clicks} clicks")  # TODO: adjust the print statement
+```
+
+What does the `.items()` method return when used on a dictionary?
