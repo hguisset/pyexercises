@@ -29,9 +29,5 @@ DELIVERABLE
 
 
 # Your code below
-print("Hapsa")
-print("1. Hapsa")
-print("2. Hapsa")
-print("3. Hapsa")
-print("4. Hapsa")
-print("5. Hapsa")
+for i in range(3):
+    print(f"{i + 1}. Hapsa")
