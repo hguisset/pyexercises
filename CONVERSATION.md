@@ -132,3 +132,20 @@ print(length)
 ```
 
 What does the `len()` function return when applied to a string?
+
+---
+## 2026-10-29 11:43, in .
+
+**Me:** How to create a condition in Python?
+
+**Tutor:**
+
+A condition is created with an `if` statement.
+
+```python
+# TODO: add a condition that prints "Yes" if the variable age is 18 or older
+age = 25
+# TODO: write the condition here
+```
+
+What is the keyword that starts every condition?
