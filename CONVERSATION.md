@@ -309,3 +309,22 @@ value_to_remove = "banana"
 ```
 
 Which built-in list method returns the removed value instead of modifying the list in place?
+
+---
+## 2026-10-30 22:41, in .
+
+**Me:** How to create a pourcentage in Python?
+
+**Tutor:**
+
+Calculating a percentage in Python.
+
+```python
+# TODO: replace numerator and denominator with your values
+numerator = 45
+denominator = 150
+percentage = (numerator / denominator) * 100
+print(f"{percentage:.2f}%")
+```
+
+What function multiplies the ratio by 100 to turn it into a percentage?

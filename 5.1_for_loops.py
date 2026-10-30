@@ -24,18 +24,19 @@ DELIVERABLE
     This file, with your comments and your code.
 """
 
-# 1. In:
-# 2. Process:
-# 3. Out:
-# 4. What I compute for each item, and why it is worth showing:
+# 1. In: a list of monthly ESG project budgets
+# 2. Process: go through each item in the list, determine its position, and calculate its percentage of the total budget
+# 3. Out: one line per item showing its position, value, and share of the total budget
+# 4. What I compute for each item, and why it is worth showing: I compute each budget's percentage of the total budget. This helps the reader understand how important each budget is compared to the overall amount
 
 
 # Your code below
-names = ["Hapsa", "Ilan", "Manel", "Rubis", "Chelsea", "Sarah", "Maissa", "Babacar"]
+budgets = [1200, 950, 1500, 1100, 2000, 1750, 1300, 1600]
 
-print("List of names and their lenghts:")
+total_budget = sum(budgets)
 
-for i in names:
-    lenght= len(i)
-    print(f"Name:{i}, Lenght: {lenght}")
-    
+for position, budget in enumerate(budgets, start=1):
+    percentage = (budget / total_budget) * 100
+    print(f"Position {position}: Budget = {budget}, Share = {percentage:.2f}%")
+
+# there should be exactly 8 lines printed because the list contains 8 items
