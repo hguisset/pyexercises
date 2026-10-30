@@ -25,10 +25,26 @@ DELIVERABLE
     This file, with your comments and your code.
 """
 
-# 1. In:
-# 2. Process:
-# 3. Out:
-# 4. My four orders, and which ones modify the original:
+# 1. In: a list of monthly ESG project budgets
+# 2. Process: display the list in four different orders while keeping the original list unchanged
+# 3. Out: the list shown in four different orders and the original list displayed again at the end
+# 4. My four orders, and which ones modify the original: 
+#    - original order: does not modify the original list.
+#    - sorted ascending with sorted(): creates a copy.
+#    - sorted descending with sorted(reverse=True): creates a copy.
+#    - reversed with reversed(): creates a copy.
+# none of these methods modify the original list because they all create a new list instead of changing it in place
 
 
 # Your code below
+budgets = [1200, 950, 1500, 1100, 2000, 1750, 1300, 1600]
+
+print("Original order:", budgets)
+
+print("Ascending order:", sorted(budgets))
+
+print("Descending order:", sorted(budgets, reverse=True))
+
+print("Reversed order:", list(reversed(budgets)))
+
+print("Original list at the end:", budgets)

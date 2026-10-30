@@ -267,3 +267,24 @@ my_list = [10, 20, 30]
 ```
 
 What built-in function returns the number of items in a list?
+
+---
+## 2026-10-30 22:28, in .
+
+**Me:** How to reverse a list in Python?
+
+**Tutor:**
+
+Reversing a list in Python.
+
+```python
+def reverse_list(items):
+    # TODO: return a new list with items in reverse order
+    pass
+
+# Example
+original = [1, 2, 3]
+reversed_list(original)  # should give [3, 2, 1]
+```
+
+Which built-in function reverses the order of a list?
