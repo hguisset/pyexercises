@@ -22,12 +22,13 @@ DELIVERABLE
     This file, with your comments and your code.
 """
 
-# 1. In:my name as a string
-# 2. Process: printing my name
-# 3. Out: printing my name five times
-# 4. My message, and why: just printed my name 5 times
+# 1. In: my name as a string
+# 2. Process: printing my name five times with a line number
+# 3. Out: my name printed five times
+# 4. My message, and why: I chose my name because it is simple and personal
 
 
 # Your code below
-for i in range(3):
+for i in range(5):
     print(f"{i + 1}. Hapsa")
+    
