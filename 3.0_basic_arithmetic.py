@@ -24,36 +24,24 @@ DELIVERABLE
     This file, with your comments and your code.
 """
 
-# 1. In:
-# 2. Process:
-# 3. Out:
-# 4. What happens when the second number is zero, and why:
+# 1. In: two numbers entered by the user
+# 2. Process: the program converts the inputs into numbers and performs addition, subtraction, multiplication, and division
+# 3. Out: the results of the four operations
+# 4. What happens when the second number is zero, and why: the program displays a message instead of a division result because division by zero is impossible and would cause an error
 
 
 # Your code below
-number_1 = int(input("Enter number 1:"))
-number_2 = int(input("Enter number 2:"))
+number_1 = float(input("Enter the first number: "))
+number_2 = float(input("Enter the second number: "))
 
-print("The number 1 is ", number_1)
-print("The number 2 is ", number_2)
+print("Addition:", number_1 + number_2)
+print("Subtraction:", number_1 - number_2)
+print("Multiplication:", number_1 * number_2)
 
-# addition of two numbers
-sum = number_1 + number_2
-print ("The sum of the two numbers is ", sum)
-
-# difference of two numbers
-diff = number_1 - number_2
-print("The difference of the two numbers is ", diff)
-
-# product of two numbers
-prod = number_1 * number_2
-print("The product of the two numbers is ", prod)
-
-# division of two numbers
 if number_2 == 0:
-    print("Division by zero is not allowed.")
+    print("Division: cannot divide by zero.")
 else:
-    print("The second number is 0")
+    print("Division:", number_1 / number_2)
 
-div = number_1 / number_2
-print("The division of the two numbers is ", div)
+# - 7 / 2 gives 3.5 because the / operator performs true division.
+# - if the second number is 0, the program displays the message "cannot divide by zero." instead of attempting the division

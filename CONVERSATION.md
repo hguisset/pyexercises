@@ -222,3 +222,20 @@ Which built-in function turns a string into an integer?
 **Tutor:**
 
 Refused, off topic.
+
+---
+## 2026-10-30 22:08, in .
+
+**Me:** How to divide in Python?
+
+**Tutor:**
+
+Division in Python is done with the `/` operator.
+
+```python
+# TODO: replace the TODO with the division operation
+result = 10 / 2
+print(result)  # prints 5.0
+```
+
+What is the operator used for division in Python?
