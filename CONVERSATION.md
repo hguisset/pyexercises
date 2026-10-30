@@ -328,3 +328,23 @@ print(f"{percentage:.2f}%")
 ```
 
 What function multiplies the ratio by 100 to turn it into a percentage?
+
+---
+## 2026-10-30 22:46, in .
+
+**Me:** How to use the while function in Python?
+
+**Tutor:**
+
+A while loop runs a block of code as long as a condition is True.
+
+```python
+# TODO: count how many times you can subtract 3 from 20 before it drops below 3
+count = 0
+value = 20
+while value >= 3:
+    value = value - 3
+    count = count + 1
+```
+
+What does the variable `count` hold after the loop ends?

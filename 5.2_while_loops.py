@@ -28,24 +28,30 @@ DELIVERABLE
     This file, with your comments and your code.
 """
 
-# 1. In:
-# 2. Process:
-# 3. Out:
+# 1. In: the user's answer
+# 2. Process:the program repeatedly asks the user to type "ESG". It counts the number of attempts and stops when the correct answer is entered or when the maximum number of attempts is reached
+# 3. Out: a summary showing whether the user succeeded and how many attempts were used
 # 4. My stop condition, my attempt limit, my summary:
+#    - stop condition: the user types "ESG".
+#    - maximum attempts: 5.
+#    - "ESG", "esg", and " ESG " are accepted as the same answer by using strip() and upper().
+#    - the summary contains the number of attempts and whether the user succeeded or reached the limit.
 
 
 # Your code below
-i = 0
-while i < 5:
-    print("Attempt number:", i + 1)
-    i= i + 1
+attempts = 0
+max_attempts = 5
+success = False
 
-while True:
-    answer = input("Do you want to continue? (yes/no): ")
-    if answer.lower().strip() == "no":
-        print("You chose to stop.")
+while attempts < max_attempts:
+    answer = input("Type ESG: ").strip().upper()
+    attempts += 1
+
+    if answer == "ESG":
+        success = True
         break
-    elif answer.lower().strip() == "yes":
-        print("You chose to continue.")
-    else:
-        print("Invalid input. Please enter 'yes' or 'no'.")
+
+if success:
+    print(f"Success! You entered ESG in {attempts} attempt(s).")
+else:
+    print(f"Maximum number of attempts reached ({max_attempts}).")
