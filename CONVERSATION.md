@@ -248,3 +248,22 @@ What is the operator used for division in Python?
 **Tutor:**
 
 Refused, off topic.
+
+---
+## 2026-10-30 22:24, in .
+
+**Me:** How to create a list in Python?
+
+**Tutor:**
+
+A list is created by putting values between square brackets, separated by commas.
+
+```python
+# Create a list of three numbers
+my_list = [10, 20, 30]
+
+# TODO: create a list called products that contains three strings
+# TODO: create a list called clicks that contains three integers
+```
+
+What built-in function returns the number of items in a list?

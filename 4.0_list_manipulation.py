@@ -26,33 +26,19 @@ DELIVERABLE
     This file, with your comments and your code.
 """
 
-# 1. In:
-# 2. Process:
-# 3. Out:
-# 4. What my list is about, and what I computed from it:
+# 1. In: a list of monthly ESG project budgets
+# 2. Process: display the original list, display one item, display the sorted list, and calculate the total budget.
+# 3. Out: the full list, one selected item, the sorted list, and the total budget.
+# 4. What my list is about, and what I computed from it: My list contains monthly ESG project budgets. I computed the total budget because it shows how much money is allocated overall to ESG projects, which is useful for financial planning and reporting.
 
 
 # Your code below
-number_1 = 4
-number_2 = 5
-number_3 = 6
-number_4 = 7
-number_5 = 8
-number_6 = 9
+budgets = [1200, 950, 1500, 1100, 2000, 1750, 1300, 1600]
 
-print(number_1)
-print(number_2)
-print(number_3)
-print(number_4)
-print(number_5)
-print(number_6)
+print("Full list:", budgets)
 
-list = [4, 5, 6, 7, 8, 9, 10, 11, 2, 1]
-print(list)
-print(list[3])
+print("One item:", budgets[3])
 
-list.sort()
-print("Sorted list:", list)
+print("Sorted list:", sorted(budgets))
 
-list.pop()
-print("List after removing the last item:", list)
+print("Total budget:", sum(budgets))
