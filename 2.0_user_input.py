@@ -26,18 +26,19 @@ DELIVERABLE
     This file, with your comments and your code.
 """
 
-# 1. In: name and age of user
-# 2. Process: my name and age are printed in a sentence
-# 3. Out: name and age
-# 4. My two fields, and what I would do with them: I just got my name and age printed in a sentence
+# 1. In: user's favorite ESG pillar and years of ESG experience
+# 2. Process: ask for both pieces of information and create a sentence using them
+# 3. Out: a sentence describing the user's ESG interests and experience
+# 4. My two fields, and what I would do with them: I chose a favorite ESG pillar and years of ESG experience because they could be useful in sustainable finance to better understand a candidate's interests and background.
 
 
 
 # Your code below
-name = input("Enter your name: ")
-age = input("Enter your age: ")
-print("My name is", name)
-print("My age is", age)
-print("My name is " + name + " and I am " + age + " years old")
+pillar = input("What is your favorite ESG pillar? ")
+experience = int(input("How many years of ESG experience do you have? "))
 
+print(f"You are most interested in the {pillar} pillar and have {experience} years of ESG experience.")
 
+# - Empty line: Python raises "ValueError: invalid literal for int() with base 10: ''."
+# - Space: Python raises "ValueError: invalid literal for int() with base 10: ' '"
+# - Text instead of a number for years of experience: Python raises "ValueError: invalid literal for int() with base 10: 'two' because expects a number."

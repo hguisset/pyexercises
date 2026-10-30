@@ -178,3 +178,38 @@ for item in products:
 ```
 
 What is the keyword that starts the loop body?
+
+---
+## 2026-10-30 21:38, in .
+
+**Me:** How to repeat a word 5 times in Python?
+
+**Tutor:**
+
+Repeating a word is done with the multiplication operator on a string.
+
+```python
+word = "hello"
+repeated = word * 5
+print(repeated)  # TODO: what does this print?
+```
+
+What function prints output to the console?
+
+---
+## 2026-10-30 21:50, in .
+
+**Me:** How to change the type of a variable?
+
+**Tutor:**
+
+Converting a variable from one type to another is called type casting.
+
+```python
+# TODO: convert the string '123' to an integer
+value = '123'
+# TODO: convert the integer 456 to a string
+text = 456
+```
+
+Which built-in function turns a string into an integer?
