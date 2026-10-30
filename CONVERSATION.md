@@ -239,3 +239,12 @@ print(result)  # prints 5.0
 ```
 
 What is the operator used for division in Python?
+
+---
+## 2026-10-30 22:19, in .
+
+**Me:** Why negative numbers are not allowed in this program?
+
+**Tutor:**
+
+Refused, off topic.
