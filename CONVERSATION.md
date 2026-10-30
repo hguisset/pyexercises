@@ -288,3 +288,24 @@ reversed_list(original)  # should give [3, 2, 1]
 ```
 
 Which built-in function reverses the order of a list?
+
+---
+## 2026-10-30 22:36, in .
+
+**Me:** How to remove a value in a list in Python?
+
+**Tutor:**
+
+Concept: Removing an item from a list by its value.
+
+```python
+# TODO: decide which method to use
+my_list = ["apple", "banana", "cherry"]
+value_to_remove = "banana"
+
+# TODO: pick one line below and uncomment it
+# my_list.remove(value_to_remove)
+# my_list.pop(my_list.index(value_to_remove))
+```
+
+Which built-in list method returns the removed value instead of modifying the list in place?

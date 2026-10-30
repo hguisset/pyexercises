@@ -23,35 +23,41 @@ DELIVERABLE
     This file, with your comments and your code.
 """
 
-# 1. In:
-# 2. Process:
-# 3. Out:
-# 4. My object, my five fields, and why those:
+# 1. In: a dictionary describing a company using ESG-related information
+# 2. Process: read a field, modify a field, remove a field, then display all remaining fields and values
+# 3. Out: the updated dictionary and all its fields
+# 4. My object, my five fields, and why those: my object is a company
+#    - name: identifies the company.
+#    - sector: shows the industry.
+#    - esg_score: measures ESG performance.
+#    - employees: indicates company size.
+#    - country: shows where the company operates.
+#    These fields are useful in sustainable finance when analyzing companies
 
 
 # Your code below
-name = input("Enter your name: ")
-age = input("Enter your age: ")
-city = input("Enter your city: ")
-country = input("Enter your country: ")
-
-print("My name is:", name)
-print("My age is:", age)
-print("My city is:", city)
-print("My country is:", country)
-
-person = {
-    "name": name,
-    "age": age,
-    "city": city,
-    "country": country
+company = {
+    "name": "GreenFuture",
+    "sector": "Renewable Energy",
+    "esg_score": 82,
+    "employees": 1200,
+    "country": "France"
 }
 
-print("The person's name is:", person["name"])
-print("The person's age is:", person["age"])
-print("The person's city is:", person["city"])
-print("The person's country is:", person["country"])
+# Read a field
+print("Company name:", company["name"])
 
-peerson_age = person.pop("age")
-print("The person's age was:", peerson_age)
-print("The remaining fields are:", person)
+# Change a field
+company["esg_score"] = 88
+
+# Remove a field
+del company["country"]
+
+# Access a field that may not exist
+print("CEO:", company.get("CEO", "Field not found"))
+
+# Display all fields and values
+for key, value in company.items():
+    print(f"{key}: {value}")
+
+# When I tried to access a field that did not exist, Python raised a key error. Using .get() instead returns a default value and prevents the program from crashing.
