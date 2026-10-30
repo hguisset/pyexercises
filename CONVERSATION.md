@@ -213,3 +213,12 @@ text = 456
 ```
 
 Which built-in function turns a string into an integer?
+
+---
+## 2026-10-30 22:00, in .
+
+**Me:** How to get rid of a space in Python?
+
+**Tutor:**
+
+Refused, off topic.
