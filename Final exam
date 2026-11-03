@@ -1,0 +1,198 @@
+# Python final exam - Hapsatou Guisset
+
+import csv
+import random
+from datetime import datetime
+
+
+# Read scenarios from CSV
+def load_scenarios():
+
+    scenarios = []
+
+    with open("scenarios_A.csv", "r", encoding="utf-8") as file:
+
+        reader = csv.DictReader(file)
+
+        for row in reader:
+
+            scenario = {}
+
+            scenario["text"] = row["Scenario"]
+
+            scenario["A"] = (
+                row["OptionA"],
+                int(row["BudgetA"]),
+                int(row["ReputationA"])
+            )
+
+            scenario["B"] = (
+                row["OptionB"],
+                int(row["BudgetB"]),
+                int(row["ReputationB"])
+            )
+
+            scenario["C"] = (
+                row["OptionC"],
+                int(row["BudgetC"]),
+                int(row["ReputationC"])
+            )
+
+            scenarios.append(scenario)
+
+    return scenarios
+
+
+# Ask player for a valid choice
+def get_choice():
+
+    choice = input("Choose A, B or C: ").upper()
+
+    while choice not in ["A", "B", "C"]:
+
+        choice = input("Choose A, B or C: ").upper()
+
+    return choice
+
+
+# Apply consequences
+# Returns a tuple
+def apply_choice(budget, reputation, option):
+
+    budget = budget + option[1]
+    reputation = reputation + option[2]
+
+    if reputation > 100:
+        reputation = 100
+
+    return budget, reputation
+
+
+# Determine final title
+def get_title(score):
+
+    if score < 95:
+        return "Eternal Intern"
+
+    elif score < 120:
+        return "Growth Hacker"
+
+    elif score < 140:
+        return "CMO Material"
+
+    else:
+        return "Viral Legend"
+
+
+# Save results
+def save_results(name, budget, reputation, title):
+
+    with open(
+        "results.csv",
+        "a",
+        newline="",
+        encoding="utf-8"
+    ) as file:
+
+        writer = csv.writer(file)
+
+        writer.writerow(
+            [
+                name,
+                budget,
+                reputation,
+                title,
+                datetime.now().strftime("%Y-%m-%d")
+            ]
+        )
+
+
+# MAIN PROGRAM
+
+name = input("Enter your name: ")
+
+budget = 10000
+reputation = 50
+
+history = []
+
+scenarios = load_scenarios()
+
+random.shuffle(scenarios)
+
+for day in range(min(10, len(scenarios))):
+
+    scenario = scenarios[day]
+
+    print()
+    print("DAY", day + 1)
+
+    print("Budget:", budget)
+    print("Reputation:", reputation)
+
+    print()
+    print(scenario["text"])
+
+    print()
+    print("A:", scenario["A"][0])
+    print("B:", scenario["B"][0])
+    print("C:", scenario["C"][0])
+
+    choice = get_choice()
+
+    option = scenario[choice]
+
+    budget, reputation = apply_choice(
+        budget,
+        reputation,
+        option
+    )
+
+    print()
+    print("Budget change:", option[1])
+    print("Reputation change:", option[2])
+
+    history.append(
+        (
+            option[2],
+            option[0]
+        )
+    )
+
+    if budget <= 0:
+
+        print("GAME OVER")
+        break
+
+    if reputation <= 0:
+
+        print("GAME OVER")
+        break
+
+
+score = reputation + budget // 200
+
+title = get_title(score)
+
+print()
+print("FINAL RESULTS")
+
+print("Budget:", budget)
+print("Reputation:", reputation)
+print("Score:", score)
+print("Title:", title)
+
+best_move = max(history)
+worst_move = min(history)
+
+print()
+print("Best move:", best_move[1])
+
+print("Worst move:", worst_move[1])
+
+save_results(
+    name,
+    budget,
+    reputation,
+    title
+)
