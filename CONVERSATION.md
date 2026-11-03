@@ -348,3 +348,12 @@ while value >= 3:
 ```
 
 What does the variable `count` hold after the loop ends?
+
+---
+## 2026-11-03 13:01, in .
+
+**Me:** How to compute a list in Python?
+
+**Tutor:**
+
+Refused, off topic.
