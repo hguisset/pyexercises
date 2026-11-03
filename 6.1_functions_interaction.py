@@ -28,10 +28,65 @@ DELIVERABLE
     This file, with your comments and your code.
 """
 
-# 1. In:
-# 2. Process, function by function:
-# 3. Out:
-# 4. The question my fourth function answers:
+# 1. In: A list of ESG project budgets
+# 2. Process, function by function: 
+#   - get_total_budget() calculates the total budget.
+#   - get_number_of_projects() counts how many budgets are in the list.
+#   - calculate_average_budget() calculates the average budget.
+#   - is_average_budget_above_1400() uses the other three functions to determine whether the average budget is greater than 1400.
+# 3. Out: True if the average budget is above 1400, otherwise False
+# 4. The question my fourth function answers:  "Is the average ESG project budget above 1400?"
+
+
+#Test cases for the three small functions:
+
+#1. get_total_budget([100, 200, 300])
+#   Expected output: 600
+
+#2. get_number_of_projects([100, 200, 300])
+#   Expected output: 3
+
+#3. calculate_average_budget([100, 200, 300])
+#   Expected output: 200
 
 
 # Your code below
+
+# Function 1: calculate the total budget
+def get_total_budget(budget_list):
+    return sum(budget_list)
+
+
+# Function 2: count the number of budgets
+def get_number_of_projects(budget_list):
+    return len(budget_list)
+
+
+# Function 3: calculate the average budget
+def calculate_average_budget(budget_list):
+    if len(budget_list) == 0:
+        return 0
+
+    total = get_total_budget(budget_list)
+    count = get_number_of_projects(budget_list)
+
+    return total / count
+
+
+# Function 4: answer a question using the other functions
+def is_average_budget_above_1400(budget_list):
+    average = calculate_average_budget(budget_list)
+    return average > 1400
+
+
+# ESG project budgets
+budgets = [1200, 950, 1500, 1100, 2000, 1750, 1300, 1600]
+
+# Test the three small functions
+print("Total budget:", get_total_budget(budgets))
+print("Number of projects:", get_number_of_projects(budgets))
+print("Average budget:", calculate_average_budget(budgets))
+
+# Use the fourth function
+print("Is the average budget above 1400?", is_average_budget_above_1400(budgets))
+

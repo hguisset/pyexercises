@@ -357,3 +357,26 @@ What does the variable `count` hold after the loop ends?
 **Tutor:**
 
 Refused, off topic.
+
+---
+## 2026-11-03 13:24, in .
+
+**Me:** How to create a function that uses other preexistent functions in Python?
+
+**Tutor:**
+
+Function composition.
+
+Define a function that calls two other functions and returns their results.
+
+```python
+def calculate_ctr(clicks, impressions):
+    # TODO: call the clicks / impressions function here
+    return ctr
+
+# --- cut by the tutor: One function per answer. The next one is yours to write ---
+```
+
+What is the name of the function that divides clicks by impressions?
+
+*Cut by the tutor: One function per answer. The next one is yours to write.*
